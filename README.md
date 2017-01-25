@@ -4,44 +4,44 @@ ENEE408I Example Project
 Installation
 ------------
 
-Examples
---------
+### Windows
 
-Adding Code
------------
+1. Install Arduino 1.6+
+2. Install the intel curie package (for arduino 101)
+    1. Launch the arduino ide
+    2. Tools->Boards->Board Manager
+    3. Search 'Intel Curie Boards'
+    4. Select install
+3. Set the arduino sketchbook location to **enee408_example_project/arduino**
+    1. Launch arduino ide
+    2. File->Preferences->Sketchbook Location
+4. Install Python 2.7 (Anaconda distribution)
 
-First, read through the example programs.  This will help you create your own executable
-code.  Next, you can read through the python / src folders to see some of the
-reusable code we have written.
+### Linux (Ubuntu)
 
-### Executable Code
+1. Install Arduino 1.6+ following [link](#).
+2. Install the intel curie package (for arduino 101)
+    1. Launch the arduino ide 
+    2. Tools->Boards->Board Manager
+    3. Search 'Intel Curie Boards'
+    4. Select install
+3. Set the arduino sketchbook location to **enee408_example_project/arduino**
+    1. Launch arduino ide
+    2. File->Preferences->Sketchbook Location
+4. Run script to enable serial port.  In a terminal,
+    1. cd ~/.arduino15/packages/Intel/tools/arduino101load/<version>/scripts
+    2. sudo ./create_dfu_udev_rule
+5. Python 2.7 should already by installed
 
-It may help to separate your executable code (code that runs) from code that
-may be reusable by different executables.  The examples folder contains executable
-code.
+Running Example
+---------------
 
-#### Arduino
-#### Cpp
-#### Python
+### Client Side (Arduino)
 
-### Reusable Code
+1.  Launch the Arduino IDE, ensure sketchbook location is correct.
+2.  Open the serial_example sketch
+3.  Upload it to the Arduino101
 
-Reusable code is code that can be used by multiple programs, it may be useful to 
-keep it separate from any specific program. Aside from 
-the example programs, the code we have written for the course is re-usable.
+### Host Side (PC / Python)
 
-#### Arduino
-#### Cpp
-#### Python
-
-Getting Help
-----
-
-#### Arduino
-#### Cpp
-#### Python
-#### OpenCV
-#### Other
-
-If you have any questions, or suggestions on how this example project could be improved
-please contact me.
+1.  python serial_example.py <port_name>
